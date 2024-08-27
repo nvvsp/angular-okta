@@ -32,6 +32,7 @@
               }
             ],
             "styles": [
+              "@okta/okta-signin-widget/css/okta-sign-in.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -62,6 +63,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "angular-okta:build:development",
+            "port": 8080
+          },
           "configurations": {
             "production": {
               "buildTarget": "angular-okta:build:production"
